@@ -10,9 +10,7 @@ import datetime
 st.title("chatgpt_demo")
 
 # Set your API key
-openai.api_key = "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"
-# openai.api_key = "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"
-# openai.api_key = "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"
+openai.api_key = st.secret["api_key"][0]
 prompt = st.text_input("请输入内容", value="", max_chars=None, key=None, type="default")
 
 f = open("./prompt.txt", "a+")
